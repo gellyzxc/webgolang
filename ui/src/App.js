@@ -4,7 +4,7 @@ import axios from "axios";
 import React, {useState, useEffect} from "react";
 
 function App() {
-  const [notes, setNotes] = useState([null]);
+  const [notes, setNotes] = useState(null);
 
   useEffect(() => {
     axios.get(

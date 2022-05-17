@@ -1,15 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+
 .notes_display_block {
   height: 100vh;
-  width: 960px;
-  border: 1px solid teal;
+  width: 660px;
+  background: rgb(206,159,252);
+  background: linear-gradient(66deg, rgba(206,159,252,1) 0%, rgba(115,103,240,1) 100%);
+}
+
+body {
+  height: 100%;
+  width: 100%;
 }
 
 .App {
   display: flex;
+  /*background-color: wheat;*/
+
+;
+}
+
+xd {
+  padding-left: 10px;
 }
 
 .note_block {
-  width: 860px;
+  width: 600px;
   border: 2px solid teal;
   padding: 10px;
   border-radius: 5px;
@@ -17,26 +37,59 @@
   margin-bottom: 6px;
   flex-direction: row;
   flex-wrap: nowrap;
+  height: min-content;
   justify-content: space-between;
+  word-break: break-all;
+  background: rgba(255, 255, 255, 0.5);
+  align-items: center;
+}
+
+.note_main {
+  display: flex;
+}
+
+.input {
+  width: 40%;
+}
+
+.input_btn {
+  width: 20%;
+}
+
+.note_text {
+  margin-left: 5px;
 }
 
 .tile {
+  padding-top: 5px;
   display: flex;
   flex-direction: column;
-  height: 90%;
+  height: 95%;
+  scroll-behavior: inherit;
+  overflow-y: scroll;
+  align-items: center;
 }
 
 .buttons {
   display: flex;
-  flex-direction: column;
-  height: 10%;
+  flex-direction: row;
+  height: 4%;
   justify-content: flex-end;
-
 }
 
-.delete_btn {
+.text_btn {
   background: transparent;
   border-radius: 5px;
   border: 2px solid teal;
   padding: 5px;
+  cursor: pointer;
+}
+
+.text_btn_second {
+  margin-left: 10px;
+  background: transparent;
+  border-radius: 5px;
+  border: 2px solid teal;
+  padding: 5px;
+  cursor: pointer;
 }

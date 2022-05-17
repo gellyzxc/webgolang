@@ -65,6 +65,8 @@ func UpdateNote(note Note) Note {
 		panic(err)
 	}
 
+    db.Close()
+
 	return note
 }
 

@@ -3,7 +3,9 @@ package main
 import (
 	"notice/controllers"
 	"github.com/gin-gonic/gin"
+	"github.com/gin-contrib/cors"
 	"net/http"
+	"time"
 	"notice/services"
 )
 
@@ -40,6 +42,16 @@ func main() {
 			rNote.DELETE("/:id", controller.DelNote)
 		}
 	}
-
+    r.Use(cors.New(cors.Config{
+    		AllowOrigins:     []string{"https://foo.com"},
+    		AllowMethods:     []string{"PUT", "PATCH"},
+    		AllowHeaders:     []string{"Origin"},
+    		ExposeHeaders:    []string{"Content-Length"},
+    		AllowCredentials: true,
+    		AllowOriginFunc: func(origin string) bool {
+    			return origin == "https://github.com"
+    		},
+    		MaxAge: 12 * time.Hour,
+    	}))
 	r.Run("0.0.0.0:9090")
 }

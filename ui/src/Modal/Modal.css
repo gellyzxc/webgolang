@@ -9,6 +9,21 @@
     justify-content: center;
     transform: scale(0);
     transition: 0.2s;
+
+}
+
+.inputs_ {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input_t {
+    width: 100%;
+    background: white;
+    height: 30px;
+    outline: none;
+    -webkit-appearance: none;
 }
 
 .modal.active {
@@ -16,6 +31,7 @@
 }
 
 .modal_content {
+    z-index: 2;
     padding: 20px;
     border-radius: 12px;
     background-color: rgba(255,0,144,0.5);

@@ -76,7 +76,7 @@ function App() {
        </div>
    </div>
     {!!notes && notes.map((note, index) => (
-    <Modal key={index} active={modalActive} setActive={setModalActive} noteid={note.id}>
+    <Modal key={index} isUpdate={() => setIsUpdate(!isUpdate)} active={modalActive} setActive={setModalActive} noteid={note.id}>
     </Modal>))}
 </div>
   );

@@ -1,4 +1,5 @@
 import './App.css';
+import './global.css'
 import axios from "axios";
 import React, { useState, useEffect, useRef } from "react";
 import Modal from "./Modal/Modal";

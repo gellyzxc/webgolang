@@ -43,10 +43,11 @@ const Modal = ({isUpdate, active, setActive, noteid}) => {
 
     return (
         <div className={active ? "modal active" : "modal"} onClick={() => setActive(false)}>
+            <div className='zalupa'></div>
             <div className="modal_content" onClick={e => e.stopPropagation()}>
                 <div className="inputs_">
-                    <input ref={editTitle} placeholder={"Загловок заметки"} type="text" className={"input_t"}/>
-                    <input ref={editInfo} placeholder={"pepe"} type="text" className={"input_t"} />
+                    <input ref={editTitle} placeholder={"Note's Title"} type="text" className={"input_t"}/>
+                    <input ref={editInfo} placeholder={"Note's Content"} type="text" className={"input_t"} />
                 </div>
                 <button onClick={() => EditNote(noteid)} className={"input_btn"}>
                     Add

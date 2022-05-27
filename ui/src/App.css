@@ -4,34 +4,62 @@
   
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
+@media all and (orientation: portrait) {
+  .tile {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (orientation: landscape) {
+  .tile {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
 
 .notes_display_block {
   height: 100vh;
-  width: 660px;
-  background: rgb(206,159,252);
+  width: 100vw;
+  display: flex;
+  background: transparent;
   background: linear-gradient(66deg, rgba(206,159,252,1) 0%, rgba(115,103,240,1) 100%);
+  flex-direction: column;
+  align-items: center;
 }
 
 body {
   height: 100%;
   width: 100%;
+  background-color: black;
 }
 
 .App {
   display: flex;
   /*background-color: wheat;*/
+  justify-content: center
 
 ;
 }
 
-xd {
-  padding-left: 10px;
+.add_btn {
+  background: transparent;
+  text-decoration: none;
+  border: none;
+}
+
+.add_button {
+  height: 4vh;
+  background: transparent;
 }
 
 .note_block {
-  width: 600px;
-  border: 2px solid teal;
+  /* width: 95vw; */
+  /* border: 2px solid teal; */
   padding: 10px;
+  margin: 2px;
   border-radius: 5px;
   display: flex;
   margin-bottom: 6px;
@@ -40,7 +68,7 @@ xd {
   height: min-content;
   justify-content: space-between;
   word-break: break-all;
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.3);
   align-items: center;
 }
 
@@ -61,35 +89,43 @@ xd {
 }
 
 .tile {
-  padding-top: 5px;
-  display: flex;
-  flex-direction: column;
-  height: 95%;
+  padding: 5px;
+  padding-top: 0px;
+  /* display: flex;
+  flex-direction: column; */
+  width: 98vw;
+  display: grid;
   scroll-behavior: inherit;
   overflow-y: scroll;
-  align-items: center;
 }
 
-.buttons {
+.header {
+  width: 98%;
+  height: 5%;
+  padding-left: 1%;
+  padding-right: 1%;
   display: flex;
   flex-direction: row;
-  height: 4%;
-  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-between;
 }
+
+.header_text {
+  color: white;
+  font-size: 26px;
+}
+
 
 .text_btn {
   background: transparent;
-  border-radius: 5px;
-  border: 2px solid teal;
-  padding: 5px;
+  border: none;
   cursor: pointer;
 }
 
 .text_btn_second {
-  margin-left: 10px;
+  margin-left: 0;
   background: transparent;
-  border-radius: 5px;
-  border: 2px solid teal;
+  border: none;
   padding: 5px;
   cursor: pointer;
 }
